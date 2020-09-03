@@ -1,0 +1,46 @@
+/*
+ QUESTION 4: Write a program in Java to input a number and check whether it is a Krishnamurthy Number or not, 
+ a Krishnamurthy number is one whose sum of factorial of digits of the number is equal to the number,
+ e.g. 145 as, 1! + 4!+ 5! = 1 + 24 + 120 = 145.
+ 
+                                  SOURCE CODE*/
+
+import java.util.*;
+class Krishnamurthy_no
+ {
+     public static void main()
+     {
+         Scanner in = new Scanner(System.in);
+         System.out.println("Enter a no:");
+         int x,b,d=0,c,s,i;
+         x= in.nextInt();
+         b=x;
+         
+         while(b>0)
+         {
+             c=b%10;
+             s=1;
+             for(i=1; i<=c; i++)
+             {
+                 s=s*i;
+                }
+                b=b/10;
+                d=d+s;
+            }
+            if(x == d)
+            System.out.println(" "+x+" is a krishnamurthy number");
+            else
+            System.out.println(" "+x+" is  not a krishnamurthy number");
+        }
+    }
+    /*1ST SAMPLE INPUT/OUTPUT
+
+Enter a no:
+896
+ 896 is  not a krishnamurthy number
+ 
+*2ND SAMPLE INPUT/OUTPUT
+Enter a no:
+145
+ 145 is a krishnamurthy number
+*/
