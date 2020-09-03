@@ -1,0 +1,47 @@
+class FinallyDemo
+ {
+     static void proA()
+     {
+         try{
+             System.out.println("Inside proA");
+             throw new RuntimeException("demo");
+            }
+            finally{
+                System.out.println("proA's finally");
+            }
+        }
+        
+        static void proB()
+        {
+            try{
+                System.out.println("Inside proB");
+                return;
+            }
+            finally{
+                System.out.println("proB's finally");
+            }
+        }
+        
+        static void proC()
+        {
+            try{
+                 System.out.println("Inside proC");
+                }
+             finally{
+                System.out.println("proC's finally");
+            } 
+        }
+        
+        public static void main(String args[])
+        {
+            try{
+                proA();
+            }
+            catch(Exception e)
+            {
+               System.out.println("Caught:");
+            }
+            proB();
+            proC();
+        }
+    }
