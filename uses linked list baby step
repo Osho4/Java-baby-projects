@@ -1,0 +1,52 @@
+import java.util.*;
+class List2
+ {
+     public static void main()
+     {
+         Node2 start=null;
+         start= create(start);
+         show(start);
+         /*addLast(start);
+         show(start);
+         start= addBeg(start);
+         show(start); */
+        }
+        
+      public static Node2 create(Node2 start)
+      {
+          Scanner in= new Scanner(System.in);
+          String reply;
+          Node2 p,q;
+          do
+          {
+              p = new Node2();
+              p.input();
+              if (start == null)
+              {
+                  start =p;
+                }
+              else
+              {
+                  for(q=start; q.link != null; q= q.link)
+                  {
+                    }
+                  q.link = p;
+                }
+                
+              System.out.println("Wish to add more node? Y/N ");
+              reply= in.next();
+            }
+           while(reply.equalsIgnoreCase("Y"));
+           return(start);
+        }
+      
+        public static void show(Node2 start)
+        {
+            Node2 q;
+            System.out.println("Content of List");
+            for(q=start; q!= null; q=q.link)
+            {
+                q.show();
+            }
+        }
+    }
