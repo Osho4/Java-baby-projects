@@ -1,0 +1,36 @@
+package ISC2018;
+
+class Sales extends Product
+ {
+     int day;
+     double tax, totamt;
+     public Sales(String n1, int c1, double p1, int d)
+     {
+         super(n1, c1, p1);
+         day=d;
+        }
+     
+      void compute()
+      {
+          double fine;
+          tax = 12.4/100*amount;
+          if(day>30)
+          {
+              fine = 2.5/100*amount;
+              
+            }
+          else
+          {
+              fine=0;
+            }
+          totamt= amount+ tax+ fine;
+        }
+        
+        void show()
+        {
+            super.show();
+            System.out.println(day);
+            System.out.println(tax);
+            System.out.println(totamt);
+        }
+    }
