@@ -1,0 +1,17 @@
+class triboncci
+ {
+     public static void main()
+     {
+         int f=0, t=0, fr=1,s=1, i;
+         for(i=1; i<=10; i++)
+         {
+             System.out.println(f);
+             t=f+s+fr;
+             f=s;
+             s=fr;
+             fr=t;
+            }
+        }
+    }
+    
+    
