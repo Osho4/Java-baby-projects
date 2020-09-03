@@ -1,0 +1,39 @@
+import java.util.*;
+class Mersenecomp
+ {
+     public static void main()
+     {
+         System.out.println("Enter m,n");
+         Scanner a= new Scanner(System.in);
+         int i,j,k=0, f=0,t=0, r=0;
+         int m= a.nextInt();
+         int n= a.nextInt();
+         System.out.println("those nos are:");
+         i=m;
+         for(; i<=n; i++)
+         {
+             k=0;
+             f=0;
+             for(j=1; j<=i; j++)
+             {
+                 if(i%j == 0)
+                 k=k+1;
+                }
+             if (k>2)
+              {
+                  t=i;
+                 while(t>0)
+                  {
+                      r= t%2;
+                      if(r == 0)
+                      {
+                      f=f+1;
+                      }
+                      t=t/2;
+                    }
+                 if (f < 1)
+                 System.out.print(i+" ");
+                }
+            }
+        }
+    }
