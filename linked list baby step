@@ -1,0 +1,24 @@
+import java.util.*;
+class Node2
+ {
+     int data;
+     Node2 link; //reference variable
+     
+     public Node2()
+     {
+         data=0;
+         link=null;
+        }
+        
+      public void input()
+      {
+          Scanner in= new Scanner(System.in);
+          System.out.println("Enter node value");
+          data= in.nextInt();
+        }
+        
+        public void show()
+        {
+            System.out.println(data);
+        }
+    }
