@@ -1,0 +1,38 @@
+public class process2Darray
+ {
+     public static void main()
+     {
+         int arr[][]= {{1, 3, 5}, {2, 4, 6}}; //given 2x3 array
+         int nArr[][] = new int[2][3];
+         System.out.println("Your original 2D array:");
+         for (int i=0; i<2; i++)
+         {
+             for(int j=0; j<3; j++)
+             {
+                 System.out.print(arr[i][j]+ " ");
+                }
+              System.out.println();
+            }
+          
+         for(int i= 0; i<=1; i++)
+         {
+             for(int j=0; j<=2; j++)
+             {
+                 if(arr[i][j]%2 == 0)
+                 nArr[i][j]= arr[i][j]* arr[i][j];
+                 else
+                 nArr[i][j] = arr[i][j]*arr[i][j]* arr[i][j];
+                }
+            }
+            
+         System.out.println("New 2D array after changes:");
+         for(int i=0; i<2; i++)
+         {
+             for (int j=0; j<3; j++)
+             {
+                 System.out.print(nArr[i][j]+" ");
+                }
+              System.out.println();
+            }
+        }
+    }
