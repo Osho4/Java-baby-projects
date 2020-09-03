@@ -1,0 +1,67 @@
+import java.util.*;
+class Stringpal
+ {
+     String s;
+     
+     Stringpal()
+     {
+         s= "";
+        }
+        
+        void getString()
+        {
+            Scanner a= new Scanner(System.in);
+            System.out.println("Enter a string");
+            s= a.nextLine();
+        }
+        
+        static String reverse(String w)
+        {
+            int i , l= w.length();
+            String rev = "" ;
+            char ch1 ;
+            while(l>0)
+            {
+                l=l-1 ;
+                rev = rev + w.charAt(l) ;
+                reverse( w.substring(0,l)) ;
+                                
+            }
+            return(rev);
+            
+        }
+        
+    
+        
+       void display()
+       {
+           int l ,i; 
+           
+           String w ="" , st ="" , s1 ="" ;
+           s1 = s+ " ";
+           l = s1.length() ;
+           for(i=0; i<l; i++)
+           {
+               if (Character.isWhitespace(s1.charAt(i)) == false )
+               w = s1.charAt(i) + w ;
+               else
+               {
+                st = reverse(w) ;
+                     if (st.equalsIgnoreCase(w))
+                     {
+               
+                       System.out.println(st) ;
+               
+                      }
+                  w = "" ;
+               }
+            }
+          }
+            public static void main()
+            {
+                
+                Stringpal obj = new Stringpal();
+                obj.getString();
+                obj.display();
+            }
+        }
