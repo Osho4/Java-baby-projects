@@ -1,0 +1,23 @@
+class star
+ {
+     public static void main()
+     {
+      int i=1;
+      while (i++ <=100)
+      {
+          if(i>=20 && i<=30)
+          {
+          i++;
+          continue;
+        }
+          else
+          {
+          System.out.print(" "+ i);
+          
+          if( i==78)
+          break;
+        }
+         
+        }
+    }
+}
