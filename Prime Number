@@ -1,0 +1,40 @@
+/*Question 1: Write a program in Java to input a number and check whether it is a Prime Number or not. 
+A Prime Number is one which has got only two factors (1 & itself) e.g. 3, 5, 7 etc… 
+any number having more than two factors is called a Composite Number e.g. 10, 12, 100 etc…
+
+                                      SOURCE CODE*/
+
+import java.util.*;
+class Prime_No
+{
+    public static void main()
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter a number:");
+        int n,i,c=0;
+        n = in.nextInt();
+        
+        for(i=1; i<=n; i++)
+        {
+            if(n%i  == 0)
+            c++;
+        }
+        if(c == 2)
+        System.out.println(" "+n+" is a Prime Number");
+        else
+        System.out.println(" "+n+" is not a Prime Number");
+    }
+}
+
+/*1ST SAMPLE INPUT/OUTPUT
+ 
+Enter a number:
+57
+ 57 is not a Prime Number
+ 
+ *2ND SAMPLE INPUT/OUTPUT
+Enter a number:
+67
+ 67 is a Prime Number
+ */
+ 
