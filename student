@@ -1,0 +1,46 @@
+import java.util.*;
+class SD
+ {
+     public static void main(String args[])
+     {
+         Scanner in = new Scanner(System.in);
+         String name;
+         int regno, s1, s2, s3, s4, s5;
+         student obj[]= new student[5];
+         
+         for (int i=0; i<5; i++)
+         {
+             System.out.println("Enter the name of the student- "+(i+1));
+             name= in.nextLine();
+             System.out.println("Enter the reg. no.");
+             regno= in.nextInt();
+             System.out.println("Enter the marks in subject 1");
+             s1= in.nextInt();
+             System.out.println("Enter the marks in subject 2");
+             s2= in.nextInt();
+             System.out.println("Enter the marks in subject 3");
+             s3= in.nextInt();
+             System.out.println("Enter the marks in subject 4");
+             s4= in.nextInt();
+             System.out.println("Enter the marks in subject 5");
+             s5= in.nextInt();
+             in.nextLine();
+             obj[i]= new student(name, regno,s1, s2, s3, s4, s5);
+             
+        }
+        
+        int aver= obj[0].avg();
+        int max= aver;
+        int temp=0;
+        for(int i=1; i<5; i++)
+        {
+            if(obj[i].avg()>max)
+            {
+                max=obj[i].avg();
+                temp=i;
+            }
+        }
+        
+        System.out.println("The details of the students with max avg"+ obj[temp].name +""+obj[temp].regno +" "+ obj[temp].s1+" "+ obj[temp].s2+" "+obj[temp].s3+ " "+ obj[temp].s4+ " "+ obj[temp].s5);
+    }
+}
