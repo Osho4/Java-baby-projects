@@ -1,0 +1,30 @@
+import java.util.*;
+class student
+ {
+     int regno;
+     String name;
+     int s1, s2, s3, s4, s5;
+     
+     student()
+     {}
+     
+     student(String n, int rg, int s1, int s2, int s3, int s4, int s5)
+     {
+         name=n;
+         regno=rg;
+         this.s1= s1;
+         this.s2= s2;
+         this.s3= s3;
+         this.s4= s4;
+         this.s5= s5;
+        }
+      
+      int avg()
+      {
+          int average;
+          average= (s1+s2+ s3+ s4+ s5)/5;
+          return(average);
+        }
+    }
+    
+         
