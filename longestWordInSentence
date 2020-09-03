@@ -1,0 +1,33 @@
+import java.util.*;
+class sentence
+ {
+     public static void main()
+     {
+         int max=0; int min; int c2=0, c1=0;
+         Scanner a = new Scanner(System.in);
+         System.out.println("Enter Sentence");
+         String s= a.nextLine();
+         StringTokenizer st= new StringTokenizer(s);
+         int c= st.countTokens();
+         String arr[]= new String[c];
+         for(int i=0; i<c; i++)
+         {
+             arr[i]=st.nextToken();
+            }
+            min= arr[0].length();
+         for(int i=0; i<c; i++)
+         {
+             if(arr[i].length() > max)
+             {
+                 c1=i;
+                 max= arr[i].length();
+                }
+              if(arr[i].length() < min)
+              {
+                  c2=i;
+                  min= arr[i].length();
+                }
+            }
+          System.out.println("longest"+ arr[c1]+ "smallest" + arr[c2]);
+        }
+    }
