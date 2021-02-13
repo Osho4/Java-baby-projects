@@ -1,0 +1,64 @@
+
+
+#include <stdio.h>
+#include <stdbool.h>
+
+int decode (char *str);
+int main(int argc, char *argv[])
+{
+    char c[100];
+    printf("Enter a string");
+    scanf("%[^\n]%*c", c);
+    int k;
+    k=decode(c);
+    printf("The length of string is: %d", k);
+    return 0;
+}
+
+
+    bool isnumber(char c)
+    {
+        if(c>= '0' && c<='9')
+        {
+            return 1;
+        }
+        else
+        {
+            return 0;
+        }
+    }
+   
+    int decode (char *str)
+    {
+        int c=0, j=0;
+        int value='0';
+         if (!isnumber(str[0]))
+            {
+                return -1;
+            }
+       
+        for (int i=0; str[i]!='\0'; i++)
+        {
+           
+            if (isnumber(str[i]))
+            {
+                value= str[i]-'0';
+                c=c+value;
+            }
+           
+            else if ((str[i]>='a' || str[i]>='A') && (str[i]<='z' || str[i]<='Z'))
+            {
+                for(j=1; j<=value; j++)
+                {
+                    putchar(str[i]);
+                }
+            }
+            else
+            {
+                return -1;
+            }
+        }
+        return value;
+       
+       
+    }
